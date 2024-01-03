@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja's Image Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container disable">
+        <h2>Ninja's Image Editor</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <div class="options">
+                        
+                        <!-- Create all the filters button here -->
+                        <div id="Britness" class="button active">Britness</div>
+                        <div id="grayscale" class="button">grayscale</div>
+                        <div id="contrast" class="button">contrast</div>
+                        <div id="invert" class="button">invert</div>
+                        
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brighteness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Rotate & Flip</label>
+                    <div class="options " id="rotate">
+                        <!-- Create all rotate and flips button here -->
+                        <div id="right" class="rotateicon right">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                        <div id="left" class="rotateicon">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </div>
+                        <div id="top" class="rotateicon">
+                            <img src="flip.png" alt="">
+                        </div>
+                        <div id="bottom" class="rotateicon">
+                            <img src="flip.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-div">
+                <img src="" alt="img">
+            </div>
+           <!-- Add the first showing UI image here(for ex. a image of girl with camera as we shown in our video.) -->
+        </div>
+        <div class="controls">
+            
+            <div class="row">
+                <button class="reset-filter  buttonClass">Reset Filters</button>
+
+                <input type="file" class="file-input" accept="image/*" hidden  >
+                <!-- Create the choose and save button here -->
+                <div id="changes-button">
+                    <button class="choose buttonClass">Choose</button>
+                    <button class="save buttonClass">Save Changes</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
